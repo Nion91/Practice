@@ -25,8 +25,8 @@ class USARecall:
         for i in content:
             date=i.find('div',class_='date').text
             title=i.find('div',class_='title').text
-            url=self.domain+urllib2.quote(i.a['href'])
-            self.contenturl.append((date,title,url))
+            iurl=self.domain+urllib2.quote(i.a['href'])
+            self.contenturl.append((date,title,iurl))
 
         #准备下一页
         nexturl=soup.find('li',class_='next')
